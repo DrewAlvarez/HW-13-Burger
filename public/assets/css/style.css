@@ -2,6 +2,7 @@ body {
     font-family: 'Titan One', cursive;
     background-image: url("../img/burgerBG.jpg");
     background-size: 100%;
+    color: black;
 }
 
 h1 {
