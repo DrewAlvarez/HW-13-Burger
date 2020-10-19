@@ -1,9 +1,41 @@
 <h1>EAT-DA-BURGER</h1>
 
 <div class="container">
-    <div class="newBurgers">
-        {{#each bugers}}
-            {{#unless devoured}}
-                <div class="burgerName">{{id}}. {{burger_name}}<button class="devour" data-id="{{id}}"</div>
+    <div class="row">
+        <div class="col-5 colName">Burgers to Eat!</div>
+        <div class="col-2 colName">Click to Eat</div>
+        <div class="col-5 colName">Burgers Eaten</div>
     </div>
+    <div class="row burgerArea">
+        <div class="col-5 newBurgers">
+            {{#each burgers}}
+                {{#unless devoured}}
+                    <div class="burgerName">{{id}}. {{burger_name}}</div>
+                {{/unless}}
+            {{/each}}
+        </div>
+        <div class="col-2 btnArea">
+            {{#each burgers}}
+                {{#unless devoured}}
+                    <button type="button" class=" btn btn-dark devour" data-id="{{id}}">Devour!</button>
+                {{/unless}}
+            {{/each}}
+        </div>
+        <div class="col-5 oldBurgers">
+            {{#each burgers}}
+                {{#if devoured}}
+                    <div class="oldBurgerName">{{id}}. {{burger_name}}</div>
+                {{/if}}
+            {{/each}}
+        </div>
+    </div>
+
+    <br>
+    <form class="create-form">
+        <div class="form-group">
+            <label for="burg">Add a new Burger</label>
+            <textarea type="text" id="burg" class="form-control" rows="3" name="name"></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark">Add Burger</button>
+    </form>
 </div>
