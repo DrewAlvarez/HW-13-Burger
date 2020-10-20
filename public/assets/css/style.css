@@ -11,15 +11,11 @@ h1 {
     text-align: center;
 }
 
-h2 {
-    text-align: center;
-}
-
-.colName {
-    text-align: center;
-}
-
-.newBurgers {
+h2,
+.colName,
+.newBurgers,
+.oldBurgers,
+.create-form {
     text-align: center;
 }
 
@@ -42,14 +38,6 @@ h2 {
     margin: 0 auto;
     margin-bottom: 3px;
     font-weight: lighter;
-}
-
-.oldBurgers {
-    text-align: center;
-}
-
-.create-form {
-    text-align: center;
 }
 
 .form-group {
